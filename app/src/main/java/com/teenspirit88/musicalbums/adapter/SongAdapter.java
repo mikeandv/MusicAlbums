@@ -12,6 +12,9 @@ import com.teenspirit88.musicalbums.model.Song;
 
 import java.util.ArrayList;
 
+/**
+ * Адаптер для элемента ListView используется для отображения списка песен в детальной информации по альбому
+ */
 public class SongAdapter extends ArrayAdapter<Song> {
 
     public SongAdapter(Context context, ArrayList<Song> songs) {
@@ -25,6 +28,7 @@ public class SongAdapter extends ArrayAdapter<Song> {
         if(convertView == null) {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.song_row, parent, false);
         }
+
         ((TextView) convertView.findViewById(R.id.track_number)).setText(song.getTrackNumber().toString());
         ((TextView) convertView.findViewById(R.id.track_name)).setText(song.getTrackName());
 

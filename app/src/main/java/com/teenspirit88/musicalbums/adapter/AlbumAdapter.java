@@ -10,13 +10,15 @@ import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 import com.teenspirit88.musicalbums.R;
-import com.teenspirit88.musicalbums.RoundRectTransform;
+import com.teenspirit88.musicalbums.util.RoundRectTransform;
 import com.teenspirit88.musicalbums.model.Album;
 
 import org.threeten.bp.ZonedDateTime;
 import java.util.ArrayList;
 
-
+/**
+ * Адаптер для RecyclerView
+ */
 public class AlbumAdapter extends RecyclerView.Adapter<AlbumAdapter.AlbumViewHolder> {
 
     private ArrayList<Album> dataList;
@@ -40,6 +42,8 @@ public class AlbumAdapter extends RecyclerView.Adapter<AlbumAdapter.AlbumViewHol
         holder.artistName.setText(dataList.get(position).getArtistName());
         holder.albumName.setText(dataList.get(position).getCollectionName());
         holder.releaseDate.setText(Integer.toString(ZonedDateTime.parse(dataList.get(position).getReleaseDate()).getYear()));
+        //
+
         Picasso
                 .get()
                 .load(dataList.get(position).getArtworkUrl60())
@@ -61,7 +65,7 @@ public class AlbumAdapter extends RecyclerView.Adapter<AlbumAdapter.AlbumViewHol
         TextView releaseDate;
         ImageView artworkSmall;
 
-        public AlbumViewHolder(@NonNull View itemView) {
+        AlbumViewHolder(@NonNull View itemView) {
             super(itemView);
 
             albumName = (TextView) itemView.findViewById(R.id.album_label);

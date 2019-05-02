@@ -1,4 +1,4 @@
-package com.teenspirit88.musicalbums;
+package com.teenspirit88.musicalbums.util;
 
 
 import android.graphics.Bitmap;

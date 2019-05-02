@@ -2,4 +2,10 @@
 <resources>
     <string name="app_name">Music albums</string>
     <string name="search_hint">Поиск альбома</string>
+    <string name="no_result">Результат не найден</string>
+    <string name="no_internet_connection">Интернет недоступен.\nДля работы приложения необходим доступ к сети</string>
+    <string name="wrong_res">Что-то пошло не так.\nПовторите поиск.</string>
+    <string name="action_settings">Настройки</string>
+    <string name="start_hint">Для начала воспользуйтесь поиском</string>
+    <string name="settings">Настройки</string>
 </resources>
