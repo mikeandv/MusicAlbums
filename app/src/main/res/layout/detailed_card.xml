@@ -1,0 +1,93 @@
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailedInfo">
+
+    <android.support.v7.widget.CardView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="5dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardElevation="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/card_album_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp">
+
+                <ImageView
+                    android:id="@+id/artwork_large_detailed"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginRight="15dp" />
+
+                <TextView
+                    android:id="@+id/album_label_detailed"
+                    style="@style/Text.Subtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_toEndOf="@id/artwork_large_detailed"
+                    android:layout_toRightOf="@id/artwork_large_detailed" />
+
+                <TextView
+                    android:id="@+id/artist_label_detailed"
+                    style="@style/Text.Body"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/album_label_detailed"
+                    android:layout_marginBottom="10dp"
+                    android:layout_toEndOf="@id/artwork_large_detailed"
+                    android:layout_toRightOf="@id/artwork_large_detailed" />
+
+                <TextView
+                    android:id="@+id/album_genre_detailed"
+                    style="@style/Text.Body"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/artist_label_detailed"
+                    android:layout_toEndOf="@id/artwork_large_detailed"
+                    android:layout_toRightOf="@id/artwork_large_detailed"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"/>
+
+                <TextView
+                    android:id="@+id/album_year_detailed"
+                    style="@style/Text.Body"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/artist_label_detailed"
+                    android:layout_toEndOf="@id/album_genre_detailed"
+                    android:layout_toRightOf="@id/album_genre_detailed" />
+
+            </RelativeLayout>
+
+            <ListView
+                android:id="@+id/song_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin"
+        app:layout_anchor="@id/card_album_detail"
+        app:layout_anchorGravity="bottom|end"
+        app:srcCompat="@drawable/ic_add"
+        />
+</android.support.design.widget.CoordinatorLayout>
